@@ -9,7 +9,7 @@ export const THUMBS_DOWN = 'THUMBS_DOWN';
 
     // TWORZENIE KOMENTARZA //
 
-  export function addComment(text) {
+ function addComment(text) {
       return {
         type: ADD_COMMENT,
         text: text,
@@ -17,7 +17,7 @@ export const THUMBS_DOWN = 'THUMBS_DOWN';
       }
     }
 
-
+export {addComment};
     // EDYCJA KOMENTARZA //
 
 export function editComment(id, text) {
@@ -43,7 +43,6 @@ export function editComment(id, text) {
       return {
         type: THUMBS_UP,
         id: id,
-        thumbsUpCount: 0,
       }
     }
 
@@ -51,6 +50,5 @@ export function editComment(id, text) {
       return {
         type: THUMBS_DOWN,
         id: id,
-        thumbsDownCount: 0,
       }
     }
