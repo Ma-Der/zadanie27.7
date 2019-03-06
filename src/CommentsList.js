@@ -7,7 +7,7 @@ console.log('commen', comments);
 let text;
   return  (
     <div>
-    <form onSubmit={ (e) => {addComment(text); e.preventDefault(); console.log(text);}}>
+    <form onSubmit={ (e) => {addComment(text); e.preventDefault(); console.log(addComment(text));}}>
       <input type={'text'} placeholder={'Comment'} onChange={(e) => {text = e.target.value; console.log(e.target.value);}}/>
       <button type={'submit'}>Add Comment</button>
     </form>
