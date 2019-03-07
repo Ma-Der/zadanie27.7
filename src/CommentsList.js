@@ -2,11 +2,13 @@ import React from 'react';
 import Comment from './CommentContainer';
 
 class CommentsList extends React.Component {
-  constructor({comments, addComment}){
-    super({comments, addComment});
+  constructor(props){
+    super(props);
     this.state  = {
       value: ''
     }
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(e){
@@ -15,8 +17,8 @@ class CommentsList extends React.Component {
     })
   }
 
-  handleSubmit(e){
-    e.preventDefault();
+  handleSubmit(event){
+    event.preventDefault();
     this.props.addComment(this.state.value);
   }
 
